@@ -1,0 +1,32 @@
+7. What command should one use to install JAR files in the Local Repository?
+JAR files are installed in the local repository using mvn install.
+The following plugin is used to manually install the JAR into the local Maven repository: install-file-Dfile = <file path>
+8. In Maven, what do you mean by Clean, Default, and Site?
+The three built-in build life cycles are:
+
+Clean: The clean lifecycle is in charge of project cleaning.
+Default: The project deployment is handled by the default lifecycle.
+Site: The creation of the project's site documentation is referred to as the site lifecycle.
+9. What are the different phases of the default life cycle?
+The different phases of the default lifecycle are:
+
+Validate: Make sure the project is correct and that you have all of the necessary information.
+Test: Test the compiled source code using an appropriate unit testing framework. These tests should not demand that the code be packed or deployed; instead, take the compiled code and package it in a manner that can be distributed, such as a JAR.
+Compile: Compile the project's source code.
+Verify: Perform any necessary checks on integration test findings to ensure that quality criteria are met.
+Install: Adds the package to the local repository, allowing it to be used as a dependency in other projects.
+Deploy: Copies the entire package to the remote repository for sharing with other developers and organizations, and is done in the build environment.
+10. What are Maven plugins used for? What are the types of Maven plugins?
+Maven Plugins are used for:
+
+Creating JAR files.
+Creating WAR files.
+Compiling the source code files.
+Unit testing of the code.
+Creating the project documentation.
+Creating project reports.
+Maven plugins are divided into two categories:
+
+Build plugins:  These plugins are used throughout the build process and are configured in the pom.xml file's <build/> element.
+Reporting plugins: These plugins are configured in the pom.xml's <reporting/> element and run during stage generation.
+11. “Maven uses convention over configura
